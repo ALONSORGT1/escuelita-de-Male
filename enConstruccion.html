@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página en Construcción</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            background-color: #fefefe;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            background-color: #5ac25a;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .banner img {
+            height: 50px;
+            margin: 0 15px;
+        }
+
+        .contenido {
+            flex: 1;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Estilos específicos para la página de construcción */
+        .construction-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        .construction-icon {
+            font-size: 80px;
+            color: #ff8c00;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        .titulo-container {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+            width: 600px;
+            max-width: 90%;
+            background-image: url('imagess/pizarron.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 20px;
+            border-radius: 10px;
+            height: 400px;
+        }
+
+        .titulo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 123, 255, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: fit-content;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .titulo-principal {
+            top: 30%;
+            background-color: #007bff;
+        }
+
+        .subtitulo {
+            top: 50%;
+            background-color: #0056b3;
+            font-size: 24px;
+        }
+
+        .construction-message {
+            color: #2c3e50;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .countdown-item {
+            background-color: #4b6cb7;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            font-weight: bold;
+            min-width: 70px;
+        }
+
+        .countdown-label {
+            font-size: 0.8em;
+            display: block;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .boton-volver {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .boton-volver:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: rgb(87, 84, 84);
+            color: white;
+            text-align: right;
+            padding: 10px 20px;
+            width: auto;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            .banner {
+                flex-direction: column;
+                font-size: 1em;
+            }
+            
+            .titulo-container {
+                width: 90%;
+                height: 300px;
+            }
+            
+            .titulo {
+                font-size: 1.8em;
+            }
+            
+            .construction-message {
+                font-size: 1em;
+            }
+            
+            .countdown {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <div class="banner">
+        <img src="imagess/tecnm.png" alt="Logo Izquierdo">
+        Aprende en línea con la escuelita de Male ¡Aprender es una aventura en la escuelita de Male!
+        <img src="imagess/itp.png" alt="Logo Derecho">
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="construction-content">
+        <div class="titulo-container">
+            <div class="titulo titulo-principal">¡Página en Construcción!</div>
+            <div class="titulo subtitulo">Volveremos pronto</div>
+        </div>
+        
+        <div class="construction-icon">
+            <i class="fas fa-tools"></i>
+        </div>
+        
+        <p class="construction-message">Estamos trabajando duro para traerte una experiencia increíble de aprendizaje. Muy pronto podrás disfrutar de todos los recursos educativos que estamos preparando para ti.</p>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <span id="days">00</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+        
+        <p class="construction-message">Mientras tanto, puedes explorar otras secciones de nuestro sitio o seguirnos en redes sociales para estar al tanto de las novedades.</p>
+        
+        <button class="boton-volver" onclick="window.history.back()">
+            <i class="fas fa-arrow-left"></i> Volver
+        </button>
+    </div>
+
+    <footer>
+        Tecnológico Nacional de México - Campus Pachuca - Proyecto de asignatura - Programación Web - 2025
+    </footer>
+
+    <script>
+        // Configura la fecha de lanzamiento (año, mes-1, día, hora, minuto, segundo)
+        const launchDate = new Date(2025, 5, 15, 0, 0, 0).getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+            
+            // Cálculos de tiempo
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Muestra el resultado
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            
+            // Si el contador llega a cero
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                document.querySelector(".titulo-principal").innerHTML = "¡Ya estamos en línea!";
+                document.querySelector(".subtitulo").innerHTML = "Gracias por tu paciencia";
+            }
+        }
+        
+        // Actualiza el contador cada segundo
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Ejecuta inmediatamente
+    </script>
+</body>
+</html>
